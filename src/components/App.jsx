@@ -30,7 +30,7 @@ export const App = () => {
         const newImages = response.data.hits;
         if (newImages.length === 0) {
           setError(true);
-          setImages([]); // Usuń obrazy, jeśli nie znaleziono żadnych nowych
+          setImages([]);
         } else {
           setImages(newImages);
           setError(false);
@@ -38,7 +38,7 @@ export const App = () => {
       } catch (error) {
         console.error('Error fetching data:', error);
         setError(true);
-        setImages([]); // Usuń obrazy w przypadku błędu
+        setImages([]);
       }
       setLoader(false);
     };
