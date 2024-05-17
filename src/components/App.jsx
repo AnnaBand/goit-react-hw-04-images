@@ -82,7 +82,7 @@ export const App = () => {
       )}
       {showModal && <Modal imageUrl={modalImageUrl} onClose={handleCloseModal} />}
       {error && (
-        <p className="info-noResults">
+        <p className="info-noResults sorry">
           Sorry, there are no images matching '{query}'. Please try again.
         </p>
       )}
